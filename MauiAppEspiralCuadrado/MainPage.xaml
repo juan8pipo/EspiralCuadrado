@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppEspiralCuadrado.MainPage"
+             xmlns:drawable="clr-namespace:MauiAppEspiralCuadrado" WidthRequest="800" HeightRequest="800">
+    <ContentPage.Resources>
+        <drawable:CanvasDrawable x:Key="drawable" />
+    </ContentPage.Resources>
+    <ScrollView>
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Start">
+            <Label Text="Número de vueltas"></Label>
+            <Entry  />
+            <Slider x:Name="Vueltas" ValueChanged="Vueltas_SliderChanged"   Minimum="1" Maximum="20" Value="5"/>
+            <GraphicsView x:Name="canvas" Drawable="{StaticResource drawable}" MinimumHeightRequest="800" MinimumWidthRequest="800"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
